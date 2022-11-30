@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 export const Statistics = ( { stats }) => (
     <section className="statistics">
-        {title (<h2 className="title">{ title }</h2>)}
+        <h2 className="title">{ stats.title }</h2>
 
 
   <ul className="stat-list">
