@@ -3,11 +3,14 @@ import styled from '@emotion/styled';
 export const List = styled.ul`
   border: 1px solid black;
   margin: 20px;
+  padding: 20px;
 `;
 
 export const FriendItem = styled.li`
   display: flex;
   align-items: center;
+
+  
 `;
 
 export const Status = styled.span`
@@ -26,4 +29,6 @@ export const Status = styled.span`
   height: 20px;
   width: 20px;
   border-radius: 50%;
+
+  margin-right: 10px;
 `;
