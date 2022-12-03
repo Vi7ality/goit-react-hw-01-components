@@ -13,8 +13,18 @@ export const Description = styled.div`
 `;
 
 export const Avatar = styled.img`
-  display: block;
   width: 200px;
   /* height: 200px; */
   border-radius: 50%;
+`;
+
+export const StatsList = styled.ul`
+  list-style: none;
+  display: flex;
+  justify-content: center;
+`;
+export const StatsItem = styled.li`
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px
 `;

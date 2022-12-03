@@ -1,7 +1,13 @@
+import 'modern-normalize';
+
 import { Profile } from '../Profile/Profile.jsx';
 import user from 'json/user.json';
+
 import { Statistics } from '../Statistics/Statistics';
 import data from 'json/data.json';
+
+import { FriendList } from 'components/FriendList/FriendList.jsx';
+import friends from 'json/friends.json'
 
 export const App = () => {
   return (
@@ -9,6 +15,7 @@ export const App = () => {
       style={{
         height: '100vh',
         display: 'flex',
+        flexWrap: 'wrap',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
@@ -23,7 +30,10 @@ export const App = () => {
         stats={user.stats}
       />
 
-      {/* <Statistics title="Upload stats" stats={data} /> */}
+      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
+
+      <FriendList friends={friends} />
 
     </div>
   );

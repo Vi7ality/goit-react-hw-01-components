@@ -1,20 +1,23 @@
 import PropTypes from "prop-types";
+import { Section, Title, StatList, StatItem } from "./Statistics.styled";
 
-export const Statistics = ( { stats }) => (
-    <section className="statistics">
-        <h2 className="title">{ stats.title }</h2>
+export const Statistics = ( {stats, title}) => (
+    <Section>
+        {title && (<Title>{ title }</Title>)
+        }
 
 
-  <ul className="stat-list">
+
+  <StatList>
             {stats.map(stat => (
-        <li className="item" key={stat.id}>
-      <span className="label">{stat.label}</span>
-      <span className="percentage">{stat.percentage}</span>
-    </li>
+        <StatItem key={stat.id}>
+      <span>{stat.label}</span>
+      <span>{stat.percentage}%</span>
+    </StatItem>
 ))}
 
-  </ul>
-</section>
+  </StatList>
+</Section>
 )
 
 Statistics.propTypes = {
@@ -23,5 +26,6 @@ Statistics.propTypes = {
             label: PropTypes.string.isRequiered,
         percentage: PropTypes.number.isRequired,}
 
-    )
+    ),
+    title: PropTypes.string,
 }

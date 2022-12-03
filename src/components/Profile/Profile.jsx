@@ -1,6 +1,6 @@
 
 import PropTypes from "prop-types";
-import { ProfileBlock, Description, Avatar } from "./Profile.styled";
+import { ProfileBlock, Description, Avatar, StatsList, StatsItem } from "./Profile.styled";
 
 export const Profile = ( { username, tag, location, avatar, stats: { followers, views, likes} }) => (
 <ProfileBlock>
@@ -14,20 +14,20 @@ export const Profile = ( { username, tag, location, avatar, stats: { followers, 
             <p>{location}</p>
   </Description>
 
-  <ul>
-    <li>
+  <StatsList>
+    <StatsItem>
       <span>Followers</span>
       <span>{followers}</span>
-    </li>
-    <li>
+    </StatsItem>
+    <StatsItem>
       <span>Views</span>
       <span>{views}</span>
-    </li>
-    <li>
+    </StatsItem>
+    <StatsItem>
       <span>Likes</span>
       <span>{likes}</span>
-    </li>
-  </ul>
+    </StatsItem>
+  </StatsList>
 </ProfileBlock>
 )
 
