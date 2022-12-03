@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const Section = styled.section`
-margin 20px`
+margin: 20px;`
 
 export const Title = styled.h2`
     font-size: 40px;
@@ -14,16 +14,20 @@ export const StatList = styled.ul`
 list-style: none;
 display: flex;
 border: solid 1px grey;
+padding: 0;
 `
 
 export const StatItem = styled.li`
+min-width: 120px;
 padding: 20px 10px;
-background-color: {randomColor};
+background-color: ${randomColor};
 display: flex;
-flex-direction: column;`
+flex-direction: column;
+align-items: center;`
 
 
 
-const randomColor = () => {
+
+function randomColor () {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`
 }

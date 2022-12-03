@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 export const List = styled.ul`
   border: 1px solid black;
+  margin: 20px;
 `;
 
 export const FriendItem = styled.li`
